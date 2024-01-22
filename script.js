@@ -1,5 +1,5 @@
 dateDisplayEl = $("#currentDay");
-timeBlocks = $("#time-blocks")
+timeBlocksEl = $("#time-blocks")
 
 
 
@@ -13,15 +13,20 @@ var now = dayjs().format('HH');
 console.log(now)
 
 
+
 var times = ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"];
 for (var i = 0; i < times.length; i++) {
 
-    timeBlocks.append(times[i]);
+    var timesEl = $('<li>'); 
+    timesEl.text(times[i]);
 
+    timesEl.addClass('row');
 
-
-
+    timeBlocksEl.append(timesEl);
+        
 }
+
+
 
     
   
